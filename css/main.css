@@ -1223,7 +1223,8 @@ button {
   position: absolute;
   width: auto;
   height: auto;
-  right: 20px;
+  right: 0px;
+  left: 70px;
   bottom: 20px;
   color: #fff;
   font-size: 10px;
