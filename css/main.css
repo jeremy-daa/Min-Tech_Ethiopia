@@ -10,6 +10,9 @@
   --light-color: #eeeeee;
   --light-dark: #333333;
 }
+html {
+  scroll-behavior: auto;
+}
 body {
   background-color: #fff;
   font-family: source sans pro, sans-serif;
@@ -1117,6 +1120,7 @@ button {
 }
 .content-wrap img {
   border-radius: 5px;
+  max-width: 90%;
 }
 .content-info span {
   font-family: work sans, sans-serif;
