@@ -11,7 +11,7 @@
   --light-dark: #333333;
 }
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #fff;
@@ -1120,7 +1120,7 @@ button {
 }
 .content-wrap img {
   border-radius: 5px;
-  max-width: 90%;
+  max-width: 100%;
 }
 .content-info span {
   font-family: work sans, sans-serif;
