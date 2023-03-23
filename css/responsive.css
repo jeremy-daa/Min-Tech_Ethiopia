@@ -168,6 +168,7 @@
     display: none;
   }
 }
+
 @media all and (max-width: 420px) {
 }
 @media all and (max-width: 380px) {
