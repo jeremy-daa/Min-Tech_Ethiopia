@@ -2072,6 +2072,27 @@ blockquote span {
   color: #ababc7;
   margin: 0;
 }
+.mail-btn {
+  background-color: var(--skin-color);
+  padding: 10px;
+  color: var(--light-color);
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+.service-item:hover .mail-btn {
+  background-color: var(--light-color);
+  color: var(--bg-color);
+  transform: ease-in 0.2s;
+}
+.service-item:hover .info-ul li {
+  color: var(--light-color);
+}
+.info-ul li {
+  margin: 5px 0;
+}
+.l {
+  margin-bottom: 20px !important;
+}
 #scroll-to-top {
   background-color: var(--skin-color);
   display: none;
