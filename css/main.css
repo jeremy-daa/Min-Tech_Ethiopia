@@ -2093,6 +2093,124 @@ blockquote span {
 .l {
   margin-bottom: 20px !important;
 }
+
+/* Table start */
+#customers {
+  padding: var(--base-spacing-unit);
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+/* Variables */
+:root {
+  --base-spacing-unit: 24px;
+  --half-spacing-unit: calc(var(--base-spacing-unit) / 2);
+  --color-alpha: #1772ff;
+  --color-form-highlight: #eeeeee;
+}
+
+/* Reset Box Sizing */
+
+/* Container styles */
+#customers .container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Table styles */
+.container .table {
+  width: 100%;
+  border: 1px solid var(--color-form-highlight);
+}
+
+/* Table Header styles */
+.table-header {
+  display: flex;
+  width: 100%;
+  background: #292929;
+  padding: calc(var(--half-spacing-unit) * 1.5) 0;
+}
+
+/* Table Row styles */
+.table-row {
+  display: flex;
+  width: 100%;
+  padding: calc(var(--half-spacing-unit) * 1.5) 0;
+
+  &:nth-of-type(odd) {
+    background: var(--color-form-highlight);
+  }
+}
+
+/* Table Data styles */
+.table-data,
+.header__item {
+  text-align: center;
+}
+
+/* Header Item styles */
+.header__item {
+  text-transform: uppercase;
+}
+
+/* Filter Link styles */
+.filter__link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-left: var(--base-spacing-unit);
+  padding-right: var(--base-spacing-unit);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: calc(-1 * var(--half-spacing-unit) * 1.5);
+    color: white;
+    font-size: var(--half-spacing-unit);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.desc::after {
+    content: "(desc)";
+  }
+
+  &.asc::after {
+    content: "(asc)";
+  }
+}
+
+/* Pagination */
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination a {
+  margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 15px;
+  background-color: #4c4c4c;
+  border-radius: 5px;
+}
+.pagination .active {
+  background-color: #292929;
+}
+
+/* Table end */
+
 #scroll-to-top {
   background-color: var(--skin-color);
   display: none;
