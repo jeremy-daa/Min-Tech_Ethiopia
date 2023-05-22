@@ -112,16 +112,16 @@
               From Humble Beginnings to Industry Leaders.
             </h2>
             <p>
-              Min-Tech Ethiopia plc, established in May 2002 by two Ethiopian and one French national shareholders,
-              is a privately owned company involved in the processing and distribution of non-metallic fillers in
-              Ethiopia.
-              The company's founders have extensive experience in mineral processing and distribution. What sets
-              Min-Tech
-              Ethiopia plc apart is the expertise of its foreign partner, Mr. Mazen Abu-Hijleh, who has over 30 years of
-              experience in mineral processing. </br>
+              Established in May 2002, Min-Tech Ethiopia plc is a privately owned company in Ethiopia specializing in
+              non-metallic filler processing and distribution. With experienced founders and a foreign partner bringing
+              over 30 years of industry expertise, Min-Tech Ethiopia plc has become a prominent player in the
+              field.</br>
             </p>
             <p>
-              The sales and after-sales technical service representative for a leading German mineral processing equipment manufacturer in the Middle East and North Africa region has a unique connection. This individual also happens to be the owner of the largest filler and gypsum processing plant in North Sudan. This close proximity offers an excellent opportunity for both companies to exchange expertise and knowledge.
+              The sales and after-sales technical service representative for a leading German mineral processing
+              equipment manufacturer in the Middle East and North Africa also owns the largest filler and gypsum
+              processing plant in North Sudan. This close proximity presents a valuable opportunity for both companies
+              to exchange expertise and knowledge.
             </p>
             <a href="#production-line" class="default-btn">Our Production Line</a>
           </div>
@@ -615,36 +615,30 @@
     </div>
   </section>
 
-  <section class="content-section padding" id="production-line">
+  <section class="counter-section padding">
     <div class="container">
-      <div class="row content-wrap">
-        
-        <div class="col-lg-6 sm-padding">
-          <div class="content-info wow fadeInRight" data-wow-delay="300ms">
-            <span>Explore The Features</span>
-            <h2>About our production line</h2>
-            <p>
-              To ensure the highest level of quality, our minerals undergo a rigorous processing method using
-              state-of-the-art machinery capable of producing up to 3 tons per hour. Our advanced processing techniques
-              ensure that the mineral fillers meet or exceed industry standards, ensuring the optimal performance and
-              quality for our clients' applications.
-
-            </p>
-
-            <p>
-              Once the processing is complete, the minerals are carefully packaged in a variety of sizes to meet the
-              specific requirements of our clients. Our packaging options are designed to offer maximum flexibility,
-              with the ability to package the materials in bags, super sacks, or bulk shipments. The packaged materials
-              are then safely stored in our spacious warehouses, waiting to be shipped to our clients.
-            </p>
+      <div class="row counter-wrap">
+        <div class="col-lg-6 col-sm-12 padding-15">
+          <div class="counter-content wow fadeInUp" data-wow-delay="100ms">
+            <div class="counter">
+              <span class="odometer" data-count="3500">00</span>
+            </div>
+            <h4>Production in KG/Hr</h4>
           </div>
         </div>
-        <div class="col-lg-6 sm-padding wow fadeInLeft" data-wow-delay="100ms">
-          <img class="box-shadow" src="img/content-1.jpg" alt="img">
+        <div class="col-lg-6 col-sm-12 padding-15">
+          <div class="counter-content wow fadeInUp" data-wow-delay="400ms">
+            <div class="counter">
+              <span class="odometer" data-count="40000">00</span>
+            </div>
+            <h4>Lifetime Production in tons</h4>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  
   <footer class="widget-section padding">
     <div class="container">
       <div class="row">
@@ -681,43 +675,43 @@
   <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function() {
-      var itemsPerPage = 20; // Number of items to show per page
+    $(document).ready(function () {
+      var itemsPerPage = 15; // Number of items to show per page
       var $tableRows = $('.table-row');
       var totalItems = $tableRows.length;
       var totalPages = Math.ceil(totalItems / itemsPerPage);
-      
+
       // Hide all table rows
       $tableRows.addClass('hidden');
-      
+
       // Show the first page
       showPage(1);
-      
+
       // Function to show a specific page
       function showPage(page) {
         // Calculate the start and end indexes of the items to show
         var startIndex = (page - 1) * itemsPerPage;
         var endIndex = startIndex + itemsPerPage;
-        
+
         // Hide all table rows
         $tableRows.addClass('hidden');
-        
+
         // Show the table rows for the current page
         $tableRows.slice(startIndex, endIndex).removeClass('hidden');
-        
+
         // Update pagination links
         updatePagination(page);
       }
-      
+
       // Function to update pagination links
       function updatePagination(currentPage) {
         var $pagination = $('.pagination');
-        
+
         // Clear pagination links
         $pagination.empty();
-        
-        
-        
+
+
+
         // Add page number links
         for (var i = 1; i <= totalPages; i++) {
           if (i === currentPage) {
@@ -726,16 +720,16 @@
             $pagination.append('<a>' + i + '</a>');
           }
         }
-        
+
       }
-      
+
       // Handle click events on pagination links
-      $('.pagination').on('click', 'a', function() {
+      $('.pagination').on('click', 'a', function () {
         var $clickedLink = $(this);
-        
-        
-          showPage(parseInt($clickedLink.text()));
-        
+
+
+        showPage(parseInt($clickedLink.text()));
+
       });
     });
   </script>
