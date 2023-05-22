@@ -1,10 +1,10 @@
 :root {
-    --skin-color:  #cf0a0a;
-    --skin-hover: #d01e1e;
-    --bg-color: #141414;
-    --light-color: #eeeeee;
-    --light-dark: #333333;
-  }
+  --skin-color: #cf0a0a;
+  --skin-hover: #d01e1e;
+  --bg-color: #141414;
+  --light-color: #eeeeee;
+  --light-dark: #333333;
+}
 .slider-content-wrap {
   height: 650px;
 }
@@ -92,7 +92,7 @@
   overflow: hidden;
 }
 .dl-slider .dl-btn {
-  background-color:  var(--skin-color);
+  background-color: var(--skin-color);
   display: inline-block;
   color: #fff;
   font-size: 12px;
@@ -118,7 +118,7 @@
 }
 @media only screen and (max-width: 992px) {
   .slider-content-wrap {
-    height: 400px;
+    height: 500px;
   }
   .dl-slider .dl-caption.medium {
     font-size: 12px;
@@ -190,7 +190,7 @@
   outline: none;
 }
 .dl-slider .slick-dots li.slick-active button {
-  background-color:  var(--skin-color);
+  background-color: var(--skin-color);
   transition: all 0.3s ease-in-out;
 }
 .dl-slider.vertical-dots .slick-dots {
