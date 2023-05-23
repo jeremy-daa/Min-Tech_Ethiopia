@@ -358,33 +358,34 @@
 })(jQuery);
 
 // carousel
-    var images = document.querySelectorAll('.carousel img');
-    var currentIndex = 0;
-    var autoplayTimer;
+var carousel = document.querySelector('.carousel');
+var images = carousel.querySelectorAll('img');
+var currentIndex = 0;
+var autoplayTimer;
 
-    function showImage(index) {
-      images.forEach(function(image, i) {
-        if (i === index) {
-          image.style.display = 'block';
-        } else {
-          image.style.display = 'none';
-        }
-      });
+function showImage(index) {
+  images.forEach(function(image, i) {
+    if (i === index) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
     }
-    
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    }
-    
-    function autoplayCarousel() {
-      nextImage();
-      autoplayTimer = setTimeout(autoplayCarousel, 5000);
-    }
+  });
+}
 
-    // Show the initial image
-    showImage(currentIndex);
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+}
 
-    // Start autoplay
-    autoplayCarousel();
+function autoplayCarousel() {
+  nextImage();
+  autoplayTimer = setTimeout(autoplayCarousel, 5000);
+}
+
+// Show the initial image
+showImage(currentIndex);
+
+// Start autoplay
+autoplayCarousel();
 // carousel
