@@ -2584,3 +2584,20 @@ blockquote span {
   color: #fff;
   opacity: 0.8;
 }
+
+/* carousel */
+
+.carousel {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* carousel */
