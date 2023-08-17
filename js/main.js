@@ -356,3 +356,43 @@
     
 
 })(jQuery);
+
+// carousel
+window.addEventListener('DOMContentLoaded', function() {
+    var carousels = document.querySelectorAll('.carousel');
+  
+    function showImage(carousel, index) {
+      var images = carousel.querySelectorAll('img');
+      images.forEach(function(image, i) {
+        if (i === index) {
+          image.style.display = 'block';
+        } else {
+          image.style.display = 'none';
+        }
+      });
+    }
+  
+    function nextImage(carousel) {
+      var images = carousel.querySelectorAll('img');
+      var currentIndex = parseInt(carousel.dataset.currentIndex);
+      var newIndex = (currentIndex + 1) % images.length;
+      carousel.dataset.currentIndex = newIndex;
+      showImage(carousel, newIndex);
+    }
+  
+    function autoplayCarousel(carousel) {
+      var autoplayTimer = setInterval(function() {
+        nextImage(carousel);
+      }, 5000);
+      carousel.dataset.autoplayTimer = autoplayTimer;
+    }
+  
+    // Initialize carousels
+    carousels.forEach(function(carousel) {
+      carousel.dataset.currentIndex = 0;
+      showImage(carousel, 0);
+      autoplayCarousel(carousel);
+    });
+  });
+  
+// carousel

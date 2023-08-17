@@ -2584,3 +2584,32 @@ blockquote span {
   color: #fff;
   opacity: 0.8;
 }
+
+/* carousel */
+
+.carousel {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Additional styling for the section headings (optional) */
+section h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Additional styling for the content paragraphs (optional) */
+section p {
+  line-height: 1.5;
+}
+
+/* carousel */
