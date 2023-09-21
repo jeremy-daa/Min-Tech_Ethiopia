@@ -2613,3 +2613,62 @@ section p {
 }
 
 /* carousel */
+
+/* Confirmation modal */
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  animation: fade-down 0.7s ease-in-out;
+}
+.confirmation-modal-inner {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+.confirmation-modal-content {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background-color: rgb(108, 205, 108);
+  padding: 10px;
+  border-radius: 5px;
+}
+.confirmation-modal-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+.confirmation-modal-body p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+}
+
+.close_button {
+  font-size: 35px;
+  color: rgb(58, 120, 244);
+  cursor: pointer;
+}

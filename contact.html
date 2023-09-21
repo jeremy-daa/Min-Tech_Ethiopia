@@ -44,35 +44,17 @@
 
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript">
       (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init("AhV_-K5-vej4mGuTH");
+        emailjs.init("VxhvPomz3bJ2i8_ui");
       })();
     </script>
-    <script type="text/javascript">
-      window.onload = function () {
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // these IDs from the previous steps
-            emailjs.sendForm("contact_service", "contact_form", this).then(
-              function () {
-                console.log("SUCCESS!");
-              },
-              function (error) {
-                console.log("FAILED...", error);
-              }
-            );
-          });
-      };
-    </script>
+    <script type="text/javascript" src="/js/script.js"></script>
   </head>
 
   <body>
@@ -85,6 +67,20 @@
     <![endif]-->
     <div class="site-preloader-wrap">
       <div class="spinner"></div>
+    </div>
+    <div class="confirmation-modal" id="modal">
+      <div class="confirmation-modal-inner">
+        <div class="confirmation-modal-content">
+          <div class="confirmation-modal-header">
+            <h2 class="actual-message">Thank you!</h2>
+          </div>
+          <div class="confirmation-modal-body">
+            <p class="actual-message-description">
+              Your message has been sent successfully.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <header class="header" id="header">
       <div class="primary-header">
@@ -168,6 +164,7 @@
                 let our experienced team help you with all your needs. We look
                 forward to hearing from you!
               </p>
+
               <h3>Dukem, Ethiopia</h3>
               <h4>
                 <span>Email:</span> mintech@ethionet.et <br />
@@ -178,7 +175,11 @@
           </div>
           <div class="col-md-6 padding-15">
             <div class="contact-form" id="contact-form">
-              <form class="form-horizontal" id="">
+              <form
+                class="form-horizontal"
+                id="form-data"
+                onsubmit="sendEmail(); return false;"
+              >
                 <div class="form-group colum-row row">
                   <div class="col-sm-6">
                     <input
@@ -216,12 +217,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <button
-                      id="submit"
-                      class="default-btn"
-                      type="submit"
-                      onclick="Log()"
-                    >
+                    <button id="submit" class="default-btn" type="submit">
                       Send Message
                     </button>
                   </div>
@@ -272,29 +268,6 @@
     <a data-scroll href="#header" id="scroll-to-top"
       ><i class="arrow_carrot-up"></i
     ></a>
-    <script>
-      function Log() {
-        const from_name = document.getElementById("name").value;
-        const email_id = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-        emailjs
-          .send("service_7peixpm", "template_zvynfuo", {
-            from_name: from_name,
-            email_id: email_id,
-            message: message,
-          })
-          .then(function (response) {
-            alert("Your message has been sent successfully", response.status);
-          })
-          .catch(function (error) {
-            alert("Your message has not been sent", error.status);
-          });
-      }
-    </script>
-    <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
 
     <script src="js/vendor/bootstrap.min.js"></script>
