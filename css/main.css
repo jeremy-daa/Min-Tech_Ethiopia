@@ -1382,7 +1382,7 @@ button {
   background-color: var(--skin-color);
 }
 .page-header {
-  background-image: url(../img/page-header.jpg);
+  background-image: url(../img/page-header.jpeg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2671,4 +2671,71 @@ section p {
   font-size: 35px;
   color: rgb(58, 120, 244);
   cursor: pointer;
+}
+
+/*### Slider  ###*/
+.award {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.award-slider {
+  width: 80%;
+  overflow: hidden;
+  margin: 100px auto;
+}
+.award-slider h1 {
+  text-align: center;
+}
+.slider {
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: 0.5s;
+}
+
+.slides img {
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+}
+
+/* Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Slider Animation */
+.slides {
+  animation: slide 30s infinite;
 }
